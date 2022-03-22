@@ -35,9 +35,11 @@ namespace BookLibrary.Forms
             if (user != null &&
                 user.FirstOrDefault().PasswordHash == hashedPassword)
             {
-                MessageBox.Show("Logged in successfully.");
-                
-                //Redirect to main form
+                //if successful
+                this.Hide();
+                Main homeForm = new Main();
+                homeForm.ShowDialog();
+                this.Close();
             }
             else
             {

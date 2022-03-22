@@ -1,7 +1,7 @@
 ﻿
 namespace BookLibrary.Forms
 {
-    partial class Home
+    partial class Favorites
     {
         /// <summary>
         /// Required designer variable.
@@ -36,21 +36,21 @@ namespace BookLibrary.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Categories";
+            this.label1.Size = new System.Drawing.Size(230, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Favorite Books";
             // 
-            // Home
+            // Favorites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 411);
             this.Controls.Add(this.label1);
-            this.Name = "Home";
-            this.Text = "Home";
+            this.Name = "Favorites";
+            this.Text = "Favorites";
             this.ResumeLayout(false);
             this.PerformLayout();
 

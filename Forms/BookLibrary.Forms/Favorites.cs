@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace BookLibrary.Forms
 {
-    public partial class Account : Form
+    public partial class Favorites : Form
     {
-        public Account()
+        public Favorites()
         {
             InitializeComponent();
         }
