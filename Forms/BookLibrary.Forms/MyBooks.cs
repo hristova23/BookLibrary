@@ -14,9 +14,11 @@ namespace BookLibrary.Forms
 
         private void MyBooks_Load(object sender, EventArgs e)
         {
-            var listItem = new OwnedBookListItem();
-            listItem.Title = "The Flinch";
-            listItem.Author = "Hristova";
+            var listItem = new OwnedBookListItem
+            {
+                Title = "The Flinch",
+                Author = "Hristova"
+            };
             flowLayoutPanel.Controls.Add(listItem);
         }
 

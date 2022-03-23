@@ -50,6 +50,8 @@ namespace BookLibrary.Forms
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
+            string firstName = FirstNameTxtBox.Text;
+            string lastName = LastNameTxtBox.Text;
             string email = EmailTxtBox.Text;
             string password = PasswordTxtBox.Text;
             string confirmPassword = ConfirmPasswordTxtBox.Text;
@@ -59,7 +61,7 @@ namespace BookLibrary.Forms
 
             try
             {
-                userService.Create(email, password, confirmPassword);
+                userService.Create(firstName, lastName, email, password, confirmPassword);
                 //Redirect to main form
             }
             catch (Exception err)

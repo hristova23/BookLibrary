@@ -5,7 +5,7 @@ namespace BookLibrary.Services
 {
     public interface IUserService
     {
-        void Create(string email, string password, string confirmPassword);
+        void Create(string firstName, string lastName, string email, string password, string confirmPassword);
         string HashPassword(string password);
         IEnumerable<UserListingServiceModel> SearchByEmail(string email);
     }

@@ -8,6 +8,14 @@ namespace BookLibrary.Data.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(DataValidations.NameMaxLenght)]
+        public string FirstName { get; set; }
+
+        [Required]
+        [MaxLength(DataValidations.NameMaxLenght)]
+        public string LastName { get; set; }
+
+        [Required]
         [MaxLength(DataValidations.EmailMaxLenght)]
         public string Email { get; set; }
 

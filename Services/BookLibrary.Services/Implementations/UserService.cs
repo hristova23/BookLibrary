@@ -18,7 +18,7 @@ namespace BookLibrary.Services.Implementations
             this.data = data;
         }
 
-        public void Create(string email, string password, string confirmPassword)
+        public void Create(string firstName, string lastName, string email, string password, string confirmPassword)
         {
             if (email == "" || password == "")
             {
@@ -66,6 +66,8 @@ namespace BookLibrary.Services.Implementations
                     .Select(u => new UserListingServiceModel
                     {
                         Id = u.Id,
+                        FirstName = u.FirstName,
+                        LastName = u.LastName,
                         Email = u.Email,
                         PasswordHash = u.PasswordHash
                     })
