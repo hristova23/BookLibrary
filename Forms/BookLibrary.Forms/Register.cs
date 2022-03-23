@@ -65,7 +65,6 @@ namespace BookLibrary.Forms
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-                throw;//remove later
             }
 
             ClearForm(sender, e);

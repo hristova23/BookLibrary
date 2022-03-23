@@ -8,18 +8,12 @@ using System.Windows.Forms;
 
 namespace BookLibrary.Forms
 {
-    public partial class BookListItem : UserControl
+    public partial class OwnedBookListItem : UserControl
     {
-        public BookListItem()
+        public OwnedBookListItem()
         {
             InitializeComponent();
         }
-
-        private void DetailsBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private string author;
         private string title;
         private Image cover;
@@ -61,6 +55,16 @@ namespace BookLibrary.Forms
                 cover = value;
                 coverPictureBox.Image = value;
             }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

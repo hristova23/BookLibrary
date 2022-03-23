@@ -35,14 +35,18 @@ namespace BookLibrary.Forms
             this.authorLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.descriptionTxtBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // coverPictureBox
             // 
-            this.coverPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.coverPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coverPictureBox.Location = new System.Drawing.Point(15, 73);
             this.coverPictureBox.Name = "coverPictureBox";
-            this.coverPictureBox.Size = new System.Drawing.Size(231, 377);
+            this.coverPictureBox.Size = new System.Drawing.Size(231, 362);
             this.coverPictureBox.TabIndex = 0;
             this.coverPictureBox.TabStop = false;
             // 
@@ -54,7 +58,7 @@ namespace BookLibrary.Forms
             this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DownloadBtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DownloadBtn.ForeColor = System.Drawing.Color.White;
-            this.DownloadBtn.Location = new System.Drawing.Point(278, 338);
+            this.DownloadBtn.Location = new System.Drawing.Point(281, 384);
             this.DownloadBtn.Name = "DownloadBtn";
             this.DownloadBtn.Size = new System.Drawing.Size(275, 51);
             this.DownloadBtn.TabIndex = 33;
@@ -65,9 +69,9 @@ namespace BookLibrary.Forms
             // 
             this.titleLbl.AutoSize = true;
             this.titleLbl.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titleLbl.ForeColor = System.Drawing.Color.Black;
+            this.titleLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.titleLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.titleLbl.Location = new System.Drawing.Point(278, 12);
+            this.titleLbl.Location = new System.Drawing.Point(281, 72);
             this.titleLbl.Name = "titleLbl";
             this.titleLbl.Size = new System.Drawing.Size(114, 48);
             this.titleLbl.TabIndex = 34;
@@ -79,7 +83,7 @@ namespace BookLibrary.Forms
             this.authorLbl.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.authorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
             this.authorLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.authorLbl.Location = new System.Drawing.Point(287, 60);
+            this.authorLbl.Location = new System.Drawing.Point(290, 120);
             this.authorLbl.Name = "authorLbl";
             this.authorLbl.Size = new System.Drawing.Size(95, 27);
             this.authorLbl.TabIndex = 35;
@@ -89,9 +93,9 @@ namespace BookLibrary.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(278, 118);
+            this.label1.Location = new System.Drawing.Point(281, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 24);
             this.label1.TabIndex = 36;
@@ -101,24 +105,55 @@ namespace BookLibrary.Forms
             // 
             this.descriptionTxtBox.BackColor = System.Drawing.SystemColors.Control;
             this.descriptionTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionTxtBox.Location = new System.Drawing.Point(278, 155);
+            this.descriptionTxtBox.Location = new System.Drawing.Point(281, 215);
             this.descriptionTxtBox.Multiline = true;
             this.descriptionTxtBox.Name = "descriptionTxtBox";
             this.descriptionTxtBox.ReadOnly = true;
             this.descriptionTxtBox.Size = new System.Drawing.Size(275, 163);
             this.descriptionTxtBox.TabIndex = 37;
             // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(281, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 2);
+            this.label2.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 33);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Details";
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(15, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(558, 2);
+            this.label3.TabIndex = 41;
+            // 
             // Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 411);
+            this.ClientSize = new System.Drawing.Size(582, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.descriptionTxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.authorLbl);
             this.Controls.Add(this.titleLbl);
             this.Controls.Add(this.DownloadBtn);
             this.Controls.Add(this.coverPictureBox);
+            this.MinimumSize = new System.Drawing.Size(598, 489);
             this.Name = "Details";
             this.Text = "Details";
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
@@ -135,5 +170,8 @@ namespace BookLibrary.Forms
         private System.Windows.Forms.Label authorLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox descriptionTxtBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }
