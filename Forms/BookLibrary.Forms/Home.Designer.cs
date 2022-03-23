@@ -70,6 +70,7 @@ namespace BookLibrary.Forms
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(598, 489);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);

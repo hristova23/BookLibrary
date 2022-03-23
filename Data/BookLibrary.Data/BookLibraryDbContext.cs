@@ -7,7 +7,6 @@ namespace BookLibrary.Data
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Image> Images { get; set; }
-        public DbSet<Language> Languages { get; set; }
         public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
@@ -15,19 +14,13 @@ namespace BookLibrary.Data
             if (!builder.IsConfigured)
             {
                 //builder.UseSqlServer("Server=.;Database=BookLibrary;Integrated Security=True;");
-                builder.UseSqlServer("Server=DESKTOP-LTGBELC\\SQLEXPRESS;Database=BookLibrary;Integrated Security=True;");
+                builder.UseSqlServer("Server=DESKTOP-LTGBELC\\SQLEXPRESS;Database=BookLibrary;Integrated Security=True;MultipleActiveResultSets=true");
             }
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Book>(book =>
             {
-                book
-                    .HasOne(b => b.Language)
-                    .WithMany(l => l.Books)
-                    .HasForeignKey(b => b.LanguageId)
-                    .OnDelete(DeleteBehavior.Restrict);
-
                 book
                     .HasOne(b => b.Image)
                     .WithOne(i => i.Book)

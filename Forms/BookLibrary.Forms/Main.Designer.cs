@@ -135,7 +135,7 @@ namespace BookLibrary
             this.SearchBtn.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.SearchBtn.Size = new System.Drawing.Size(202, 60);
             this.SearchBtn.TabIndex = 2;
-            this.SearchBtn.Text = " Search";
+            this.SearchBtn.Text = " Browse";
             this.SearchBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);

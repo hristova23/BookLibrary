@@ -1,4 +1,5 @@
 ﻿using BookLibrary.Forms;
+using BookLibrary.Services.Models.User;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,11 +10,13 @@ namespace BookLibrary
     {
         private Button currentButton;
         private Form activeForm;
+        private UserListingServiceModel user;
 
-        public Main()
+        public Main(UserListingServiceModel user)
         {
             InitializeComponent();
-            OpenChildForm(new Home(), null);
+            this.user = user;
+            OpenChildForm(new Home(user), null);
         }
 
         public void OpenChildForm(Form childForm, object btnSender)
@@ -62,17 +65,17 @@ namespace BookLibrary
 
         private void AccountBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Account(), sender);
+            OpenChildForm(new Account(user), sender);
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home(), sender);
+            OpenChildForm(new Home(user), sender);
         }
 
         private void MyBooksBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new MyBooks(), sender);
+            OpenChildForm(new MyBooks(user), sender);
         }
 
         private void FavoritesBtn_Click(object sender, EventArgs e)

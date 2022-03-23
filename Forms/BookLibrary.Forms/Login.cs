@@ -33,11 +33,11 @@ namespace BookLibrary.Forms
             string hashedPassword = userService.HashPassword(password);
 
             if (user != null &&
-                user.FirstOrDefault().PasswordHash == hashedPassword)
+                user.PasswordHash == hashedPassword)
             {
                 //if successful
                 this.Hide();
-                Main homeForm = new Main();
+                Main homeForm = new Main(user);
                 homeForm.ShowDialog();
                 this.Close();
             }

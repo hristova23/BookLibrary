@@ -29,48 +29,48 @@ namespace BookLibrary.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lastNameTxtBox = new System.Windows.Forms.TextBox();
+            this.firstNameTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.oldPassTxtBox = new System.Windows.Forms.TextBox();
+            this.emailNameTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SaveChanges = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.changePassGroupBox = new System.Windows.Forms.GroupBox();
+            this.confirmPassTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.newPassTxtBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.UploadCoverBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.changePassGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox3
+            // lastNameTxtBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(148, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 12;
+            this.lastNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.lastNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lastNameTxtBox.Location = new System.Drawing.Point(148, 130);
+            this.lastNameTxtBox.Name = "lastNameTxtBox";
+            this.lastNameTxtBox.Size = new System.Drawing.Size(162, 20);
+            this.lastNameTxtBox.TabIndex = 12;
             // 
-            // textBox2
+            // firstNameTxtBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(148, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 11;
+            this.firstNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.firstNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.firstNameTxtBox.Location = new System.Drawing.Point(148, 82);
+            this.firstNameTxtBox.Name = "firstNameTxtBox";
+            this.firstNameTxtBox.Size = new System.Drawing.Size(162, 20);
+            this.firstNameTxtBox.TabIndex = 11;
             // 
             // label2
             // 
@@ -94,25 +94,25 @@ namespace BookLibrary.Forms
             this.label1.TabIndex = 9;
             this.label1.Text = "First Name";
             // 
-            // textBox1
+            // oldPassTxtBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(134, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 16;
+            this.oldPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.oldPassTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.oldPassTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oldPassTxtBox.Location = new System.Drawing.Point(134, 45);
+            this.oldPassTxtBox.Name = "oldPassTxtBox";
+            this.oldPassTxtBox.Size = new System.Drawing.Size(156, 20);
+            this.oldPassTxtBox.TabIndex = 16;
             // 
-            // textBox4
+            // emailNameTxtBox
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(146, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 15;
+            this.emailNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.emailNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.emailNameTxtBox.Location = new System.Drawing.Point(146, 180);
+            this.emailNameTxtBox.Name = "emailNameTxtBox";
+            this.emailNameTxtBox.Size = new System.Drawing.Size(162, 20);
+            this.emailNameTxtBox.TabIndex = 15;
             // 
             // label3
             // 
@@ -170,32 +170,32 @@ namespace BookLibrary.Forms
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBox1
+            // changePassGroupBox
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.groupBox1.Location = new System.Drawing.Point(14, 233);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 180);
-            this.groupBox1.TabIndex = 38;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Change Password";
+            this.changePassGroupBox.Controls.Add(this.confirmPassTxtBox);
+            this.changePassGroupBox.Controls.Add(this.label7);
+            this.changePassGroupBox.Controls.Add(this.newPassTxtBox);
+            this.changePassGroupBox.Controls.Add(this.label6);
+            this.changePassGroupBox.Controls.Add(this.oldPassTxtBox);
+            this.changePassGroupBox.Controls.Add(this.label3);
+            this.changePassGroupBox.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.changePassGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
+            this.changePassGroupBox.Location = new System.Drawing.Point(14, 233);
+            this.changePassGroupBox.Name = "changePassGroupBox";
+            this.changePassGroupBox.Size = new System.Drawing.Size(296, 180);
+            this.changePassGroupBox.TabIndex = 38;
+            this.changePassGroupBox.TabStop = false;
+            this.changePassGroupBox.Text = "Change Password";
             // 
-            // textBox6
+            // confirmPassTxtBox
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(134, 117);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 20);
-            this.textBox6.TabIndex = 20;
+            this.confirmPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.confirmPassTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.confirmPassTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.confirmPassTxtBox.Location = new System.Drawing.Point(134, 117);
+            this.confirmPassTxtBox.Name = "confirmPassTxtBox";
+            this.confirmPassTxtBox.Size = new System.Drawing.Size(156, 20);
+            this.confirmPassTxtBox.TabIndex = 20;
             // 
             // label7
             // 
@@ -208,15 +208,15 @@ namespace BookLibrary.Forms
             this.label7.TabIndex = 19;
             this.label7.Text = "Cofirm Password";
             // 
-            // textBox5
+            // newPassTxtBox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(134, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 20);
-            this.textBox5.TabIndex = 18;
+            this.newPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.newPassTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newPassTxtBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.newPassTxtBox.Location = new System.Drawing.Point(134, 82);
+            this.newPassTxtBox.Name = "newPassTxtBox";
+            this.newPassTxtBox.Size = new System.Drawing.Size(156, 20);
+            this.newPassTxtBox.TabIndex = 18;
             // 
             // label6
             // 
@@ -274,22 +274,23 @@ namespace BookLibrary.Forms
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UploadCoverBtn);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.changePassGroupBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SaveChanges);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.emailNameTxtBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lastNameTxtBox);
+            this.Controls.Add(this.firstNameTxtBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(598, 489);
             this.Name = "Account";
             this.Text = "Account";
+            this.Load += new System.EventHandler(this.Account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.changePassGroupBox.ResumeLayout(false);
+            this.changePassGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,21 +298,21 @@ namespace BookLibrary.Forms
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox lastNameTxtBox;
+        private System.Windows.Forms.TextBox firstNameTxtBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox oldPassTxtBox;
+        private System.Windows.Forms.TextBox emailNameTxtBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SaveChanges;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.GroupBox changePassGroupBox;
+        private System.Windows.Forms.TextBox confirmPassTxtBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox newPassTxtBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button UploadCoverBtn;
         private System.Windows.Forms.Button button1;

@@ -1,30 +1,41 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using BookLibrary.Data;
+using BookLibrary.Services.Models.User;
 
 namespace BookLibrary.Forms
 {
     public partial class MyBooks : Form
     {
         private Form activeForm;
+        private UserListingServiceModel user;
 
-        public MyBooks()
+        public MyBooks(UserListingServiceModel user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void MyBooks_Load(object sender, EventArgs e)
         {
-            var listItem = new OwnedBookListItem
+            using var data = new BookLibraryDbContext();
+
+            foreach (var book in data.Books.Where(b=>b.UserId == user.Id))
             {
-                Title = "The Flinch",
-                Author = "Hristova"
-            };
-            flowLayoutPanel.Controls.Add(listItem);
+                var listItem = new OwnedBookListItem
+                {
+                    Title = book.Title,
+                    Author = $"{user.FirstName} {user.LastName}",
+                    ImagePath = data.Images.Where(i => i.Id == book.ImageId).FirstOrDefault().Path
+                };
+                flowLayoutPanel.Controls.Add(listItem);
+            }
         }
 
         private void CreateBookBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CreateBook(), sender);
+            OpenChildForm(new CreateBook(user), sender);
         }
 
         public void OpenChildForm(Form childForm, object btnSender)

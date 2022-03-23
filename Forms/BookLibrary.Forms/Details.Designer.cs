@@ -30,7 +30,7 @@ namespace BookLibrary.Forms
         private void InitializeComponent()
         {
             this.coverPictureBox = new System.Windows.Forms.PictureBox();
-            this.DownloadBtn = new System.Windows.Forms.Button();
+            this.ViewPdfBtn = new System.Windows.Forms.Button();
             this.titleLbl = new System.Windows.Forms.Label();
             this.authorLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@ namespace BookLibrary.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.AddToFavoriteBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,23 +48,25 @@ namespace BookLibrary.Forms
             this.coverPictureBox.Location = new System.Drawing.Point(15, 73);
             this.coverPictureBox.Name = "coverPictureBox";
             this.coverPictureBox.Size = new System.Drawing.Size(231, 362);
+            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coverPictureBox.TabIndex = 0;
             this.coverPictureBox.TabStop = false;
             // 
-            // DownloadBtn
+            // ViewPdfBtn
             // 
-            this.DownloadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.DownloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DownloadBtn.FlatAppearance.BorderSize = 0;
-            this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownloadBtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DownloadBtn.ForeColor = System.Drawing.Color.White;
-            this.DownloadBtn.Location = new System.Drawing.Point(281, 384);
-            this.DownloadBtn.Name = "DownloadBtn";
-            this.DownloadBtn.Size = new System.Drawing.Size(275, 51);
-            this.DownloadBtn.TabIndex = 33;
-            this.DownloadBtn.Text = "Download .pdf";
-            this.DownloadBtn.UseVisualStyleBackColor = false;
+            this.ViewPdfBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
+            this.ViewPdfBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewPdfBtn.FlatAppearance.BorderSize = 0;
+            this.ViewPdfBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ViewPdfBtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ViewPdfBtn.ForeColor = System.Drawing.Color.White;
+            this.ViewPdfBtn.Location = new System.Drawing.Point(421, 384);
+            this.ViewPdfBtn.Name = "ViewPdfBtn";
+            this.ViewPdfBtn.Size = new System.Drawing.Size(135, 51);
+            this.ViewPdfBtn.TabIndex = 33;
+            this.ViewPdfBtn.Text = "View .pdf";
+            this.ViewPdfBtn.UseVisualStyleBackColor = false;
+            this.ViewPdfBtn.Click += new System.EventHandler(this.ViewPdfBtn_Click);
             // 
             // titleLbl
             // 
@@ -105,6 +108,7 @@ namespace BookLibrary.Forms
             // 
             this.descriptionTxtBox.BackColor = System.Drawing.SystemColors.Control;
             this.descriptionTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTxtBox.Location = new System.Drawing.Point(281, 215);
             this.descriptionTxtBox.Multiline = true;
             this.descriptionTxtBox.Name = "descriptionTxtBox";
@@ -139,11 +143,27 @@ namespace BookLibrary.Forms
             this.label3.Size = new System.Drawing.Size(558, 2);
             this.label3.TabIndex = 41;
             // 
+            // AddToFavoriteBtn
+            // 
+            this.AddToFavoriteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
+            this.AddToFavoriteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddToFavoriteBtn.FlatAppearance.BorderSize = 0;
+            this.AddToFavoriteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddToFavoriteBtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddToFavoriteBtn.ForeColor = System.Drawing.Color.White;
+            this.AddToFavoriteBtn.Location = new System.Drawing.Point(281, 384);
+            this.AddToFavoriteBtn.Name = "AddToFavoriteBtn";
+            this.AddToFavoriteBtn.Size = new System.Drawing.Size(135, 51);
+            this.AddToFavoriteBtn.TabIndex = 42;
+            this.AddToFavoriteBtn.Text = "Add to Favorites";
+            this.AddToFavoriteBtn.UseVisualStyleBackColor = false;
+            // 
             // Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 450);
+            this.Controls.Add(this.AddToFavoriteBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -151,11 +171,12 @@ namespace BookLibrary.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.authorLbl);
             this.Controls.Add(this.titleLbl);
-            this.Controls.Add(this.DownloadBtn);
+            this.Controls.Add(this.ViewPdfBtn);
             this.Controls.Add(this.coverPictureBox);
             this.MinimumSize = new System.Drawing.Size(598, 489);
             this.Name = "Details";
             this.Text = "Details";
+            this.Load += new System.EventHandler(this.Details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,7 +186,7 @@ namespace BookLibrary.Forms
         #endregion
 
         private System.Windows.Forms.PictureBox coverPictureBox;
-        private System.Windows.Forms.Button DownloadBtn;
+        private System.Windows.Forms.Button ViewPdfBtn;
         private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Label authorLbl;
         private System.Windows.Forms.Label label1;
@@ -173,5 +194,6 @@ namespace BookLibrary.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button AddToFavoriteBtn;
     }
 }

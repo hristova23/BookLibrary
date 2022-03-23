@@ -44,6 +44,7 @@ namespace BookLibrary.Forms
             this.coverPictureBox.Location = new System.Drawing.Point(3, 2);
             this.coverPictureBox.Name = "coverPictureBox";
             this.coverPictureBox.Size = new System.Drawing.Size(101, 134);
+            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coverPictureBox.TabIndex = 8;
             this.coverPictureBox.TabStop = false;
             // 
@@ -70,12 +71,12 @@ namespace BookLibrary.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.authorLbl.AutoSize = true;
-            this.authorLbl.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.authorLbl.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.authorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.authorLbl.Location = new System.Drawing.Point(3, 156);
             this.authorLbl.MinimumSize = new System.Drawing.Size(100, 0);
             this.authorLbl.Name = "authorLbl";
-            this.authorLbl.Size = new System.Drawing.Size(100, 17);
+            this.authorLbl.Size = new System.Drawing.Size(100, 15);
             this.authorLbl.TabIndex = 6;
             this.authorLbl.Text = "Author";
             this.authorLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace BookLibrary.Forms
 {
     public partial class BookListItem : UserControl
     {
+        private string author;
+        private string title;
+        private string imagePath;
+
+        private Form activeForm;
+
         public BookListItem()
         {
             InitializeComponent();
@@ -17,12 +19,24 @@ namespace BookLibrary.Forms
 
         private void DetailsBtn_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Details(title), sender);
         }
 
-        private string author;
-        private string title;
-        private Image cover;
+        public void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.ParentForm.Controls.Add(childForm);
+            this.ParentForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         public string Author
         {
@@ -50,16 +64,16 @@ namespace BookLibrary.Forms
             }
         }
 
-        public Image Cover
+        public string ImagePath
         {
             get
             {
-                return cover;
+                return imagePath;
             }
             set
             {
-                cover = value;
-                coverPictureBox.Image = value;
+                imagePath = value;
+                coverPictureBox.Image = new Bitmap(imagePath);
             }
         }
     }

@@ -7,6 +7,6 @@ namespace BookLibrary.Services
     {
         void Create(string firstName, string lastName, string email, string password, string confirmPassword);
         string HashPassword(string password);
-        IEnumerable<UserListingServiceModel> SearchByEmail(string email);
+        UserListingServiceModel SearchByEmail(string email);
     }
 }

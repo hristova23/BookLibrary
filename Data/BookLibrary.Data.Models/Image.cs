@@ -10,10 +10,6 @@ namespace BookLibrary.Data.Models
         [MaxLength(DataValidations.FileMaxLenght)]
         public string Path { get; set; }
 
-        [Required]
-        [MaxLength(DataValidations.DescriptionMaxLenght)]
-        public string Description { get; set; }// alt tag for HTML\
-
         public Book Book { get; set; }
     }
 }

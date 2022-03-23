@@ -8,10 +8,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Book\" />
-    <Folder Include="FavoriteBook\" />
-    <Folder Include="Image\" />
-  </ItemGroup>
-
 </Project>

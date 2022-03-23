@@ -2,7 +2,6 @@
 using BookLibrary.Data.Models;
 using BookLibrary.Services.Models.User;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -56,7 +55,7 @@ namespace BookLibrary.Services.Implementations
             return Convert.ToBase64String(passwordHash);
         }
 
-        public IEnumerable<UserListingServiceModel> SearchByEmail(string email)
+        public UserListingServiceModel SearchByEmail(string email)
         {
             if (this.data.Users.Any(u => u.Email.ToLower() == email.ToLower()))
             {
@@ -71,7 +70,7 @@ namespace BookLibrary.Services.Implementations
                         Email = u.Email,
                         PasswordHash = u.PasswordHash
                     })
-                    .ToList();
+                    .FirstOrDefault();
             }
             return null;
         }

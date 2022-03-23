@@ -33,9 +33,6 @@ namespace BookLibrary.Data.Migrations
                     b.Property<int>("ImageId")
                         .HasColumnType("int");
 
-                    b.Property<int>("LanguageId")
-                        .HasColumnType("int");
-
                     b.Property<string>("PdfUrl")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -53,8 +50,6 @@ namespace BookLibrary.Data.Migrations
 
                     b.HasIndex("ImageId")
                         .IsUnique();
-
-                    b.HasIndex("LanguageId");
 
                     b.HasIndex("UserId");
 
@@ -83,11 +78,6 @@ namespace BookLibrary.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
                     b.Property<string>("Path")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -96,23 +86,6 @@ namespace BookLibrary.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Images");
-                });
-
-            modelBuilder.Entity("BookLibrary.Data.Models.Language", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Languages");
                 });
 
             modelBuilder.Entity("BookLibrary.Data.Models.User", b =>
@@ -157,12 +130,6 @@ namespace BookLibrary.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("BookLibrary.Data.Models.Language", "Language")
-                        .WithMany("Books")
-                        .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("BookLibrary.Data.Models.User", "User")
                         .WithMany("OwnedBooks")
                         .HasForeignKey("UserId")
@@ -170,8 +137,6 @@ namespace BookLibrary.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Image");
-
-                    b.Navigation("Language");
 
                     b.Navigation("User");
                 });
@@ -203,11 +168,6 @@ namespace BookLibrary.Data.Migrations
             modelBuilder.Entity("BookLibrary.Data.Models.Image", b =>
                 {
                     b.Navigation("Book");
-                });
-
-            modelBuilder.Entity("BookLibrary.Data.Models.Language", b =>
-                {
-                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("BookLibrary.Data.Models.User", b =>

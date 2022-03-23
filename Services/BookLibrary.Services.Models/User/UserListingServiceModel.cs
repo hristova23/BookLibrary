@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BookLibrary.Services.Models.User
+﻿namespace BookLibrary.Services.Models.User
 {
     public class UserListingServiceModel
     {
