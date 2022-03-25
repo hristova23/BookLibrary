@@ -1,9 +1,7 @@
 ﻿using BookLibrary.Data;
 using BookLibrary.Data.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BookLibrary.Services.Implementations
 {
@@ -16,21 +14,32 @@ namespace BookLibrary.Services.Implementations
             this.data = data;
         }
 
-        public int Create(string path)
+        public Image Create(string path)
         {
             if (path == null)
             {
                 throw new InvalidOperationException("Path cannot be empty string");
             }
 
-            this.data.Images.Add(new Image
+            Image image = new Image
             {
                 Path = path
-            });
+            };
+            this.data.Images.Add(image);
 
             this.data.SaveChanges();
 
-            return this.data.Images.Where(i => i.Path == path).FirstOrDefault().Id;
+            return image;
+        }
+
+        public void Delete(int id)
+        {
+            this.data.Images
+                .Remove(this.data.Images
+                .Where(i => i.Id == id)
+                .FirstOrDefault());
+
+            this.data.SaveChanges();
         }
     }
 }

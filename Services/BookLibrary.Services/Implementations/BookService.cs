@@ -2,6 +2,7 @@
 using BookLibrary.Data.Models;
 using BookLibrary.Services.Models.Book;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BookLibrary.Services.Implementations
@@ -15,7 +16,7 @@ namespace BookLibrary.Services.Implementations
             this.data = data;
         }
 
-        public void Create(string title, string description, string PdfUrl, int imageId, int userId)
+        public Book Create(string title, string description, string PdfUrl, int imageId, int userId)
         {
             if (title == "" 
                 || description == ""
@@ -24,30 +25,36 @@ namespace BookLibrary.Services.Implementations
                 throw new InvalidOperationException("Please, fill all fields");
             }
 
-            this.data.Books.Add(new Book
+            Book book = new Book
             {
                 Title = title,
                 Description = description,
                 PdfUrl = PdfUrl,
                 ImageId = imageId,
                 UserId = userId
-            });
+            };
+            this.data.Books.Add(book);
 
             this.data.SaveChanges();
+
+            return book;
         }
 
         public void Delete(int id)
         {
-            this.data.Books.Remove(this.data.Books.Where(b => b.Id == id).FirstOrDefault());
+            this.data.Books
+                .Remove(this.data.Books
+                .Where(b => b.Id == id)
+                .FirstOrDefault());
+
             data.SaveChanges();
         }
 
-        public BookListingServiceModel SearchByTitle(string title)
+        public IEnumerable<BookListingServiceModel> SearchByTitle(string title)
         {
             if (this.data.Books.Any(b => b.Title.ToLower() == title.ToLower()))
             {
-                return this.data
-                    .Books
+                return this.data.Books
                     .Where(b => b.Title.ToLower().Contains(title.ToLower()))
                     .Select(b => new BookListingServiceModel
                     {
@@ -58,9 +65,30 @@ namespace BookLibrary.Services.Implementations
                         UserId = b.UserId,
                         ImageId = b.ImageId
                     })
-                    .FirstOrDefault();
+                    .ToList();
             }
             return null;
+        }
+
+        public BookListingServiceModel SearchById(int id)
+        {
+            return this.data.Books
+                .Where(b => b.Id == id)
+                .Select(b => new BookListingServiceModel
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Description = b.Description,
+                    PdfUrl = b.PdfUrl,
+                    UserId = b.UserId,
+                    ImageId = b.ImageId
+                })
+                .FirstOrDefault();
+        }
+
+        public Image GetImageById(int id) 
+        {
+            return this.data.Images.Where(i => i.Id == id).FirstOrDefault();
         }
     }
 }

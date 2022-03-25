@@ -24,7 +24,7 @@ namespace BookLibrary.Forms
         private void EditBook_Load(object sender, EventArgs e)
         {
             using var data = new BookLibraryDbContext();
-            var image = data.Images.Where(i => i.Id == book.Id).FirstOrDefault();
+            var image = data.Images.Where(i => i.Id == book.ImageId).FirstOrDefault();
             coverPictureBox.Image = new Bitmap(image.Path);
             titleTxtBox.Text = book.Title;
             pdfUrlTxtBox.Text = book.PdfUrl;

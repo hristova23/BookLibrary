@@ -109,11 +109,12 @@ namespace BookLibrary.Forms
             this.descriptionTxtBox.BackColor = System.Drawing.SystemColors.Control;
             this.descriptionTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.descriptionTxtBox.Location = new System.Drawing.Point(281, 215);
+            this.descriptionTxtBox.Location = new System.Drawing.Point(281, 205);
             this.descriptionTxtBox.Multiline = true;
             this.descriptionTxtBox.Name = "descriptionTxtBox";
             this.descriptionTxtBox.ReadOnly = true;
-            this.descriptionTxtBox.Size = new System.Drawing.Size(275, 163);
+            this.descriptionTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descriptionTxtBox.Size = new System.Drawing.Size(275, 173);
             this.descriptionTxtBox.TabIndex = 37;
             // 
             // label2
@@ -157,6 +158,7 @@ namespace BookLibrary.Forms
             this.AddToFavoriteBtn.TabIndex = 42;
             this.AddToFavoriteBtn.Text = "Add to Favorites";
             this.AddToFavoriteBtn.UseVisualStyleBackColor = false;
+            this.AddToFavoriteBtn.Click += new System.EventHandler(this.AddToFavoriteBtn_Click);
             // 
             // Details
             // 

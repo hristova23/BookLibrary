@@ -11,6 +11,8 @@ namespace BookLibrary.Forms
         public Login()
         {
             InitializeComponent();
+            EmailTxtBox.Text = "viki";
+            PasswordTxtBox.Text = "123123";
         }
 
         public void ClearForm(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace BookLibrary.Forms
             using var data = new BookLibraryDbContext();
             var userService = new UserService(data);
 
-            var user = userService.SearchByEmail(email);//throw error if email do not exit
+            var user = userService.SearchByEmail(email); 
             string hashedPassword = userService.HashPassword(password);
 
             if (user != null &&

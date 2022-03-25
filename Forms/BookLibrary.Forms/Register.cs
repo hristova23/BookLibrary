@@ -1,4 +1,5 @@
 ﻿using BookLibrary.Data;
+using BookLibrary.Data.Models;
 using BookLibrary.Services.Implementations;
 using System;
 using System.Linq;
@@ -61,12 +62,13 @@ namespace BookLibrary.Forms
 
             try
             {
-                userService.Create(firstName, lastName, email, password, confirmPassword);
-                //Redirect to main form
+                User createdUser = userService.Create(firstName, lastName, email, password, confirmPassword);
+                LoginLbl_Click(sender,e);
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
+                throw;
             }
 
             ClearForm(sender, e);

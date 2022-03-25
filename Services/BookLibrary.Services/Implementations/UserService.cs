@@ -17,7 +17,7 @@ namespace BookLibrary.Services.Implementations
             this.data = data;
         }
 
-        public void Create(string firstName, string lastName, string email, string password, string confirmPassword)
+        public User Create(string firstName, string lastName, string email, string password, string confirmPassword)
         {
             if (email == "" || password == "")
             {
@@ -38,13 +38,18 @@ namespace BookLibrary.Services.Implementations
                 throw new InvalidOperationException($"Password must be between {DataValidations.PasswordMinLenght} and {DataValidations.PasswordMaxLenght} characters long");
             }
 
-            this.data.Users.Add(new User
+            User user = new User
             {
+                FirstName = firstName,
+                LastName =lastName,
                 Email = email,
                 PasswordHash = HashPassword(password)
-            });
+            };
+            this.data.Users.Add(user);
 
             this.data.SaveChanges();
+
+            return user;
         }
 
         public string HashPassword(string password)
@@ -59,8 +64,7 @@ namespace BookLibrary.Services.Implementations
         {
             if (this.data.Users.Any(u => u.Email.ToLower() == email.ToLower()))
             {
-                return this.data
-                    .Users
+                return this.data.Users
                     .Where(u => u.Email.ToLower().Contains(email.ToLower()))
                     .Select(u => new UserListingServiceModel
                     {

@@ -132,6 +132,7 @@ namespace BookLibrary.Forms
             this.descriptionTxtBox.Location = new System.Drawing.Point(277, 192);
             this.descriptionTxtBox.Multiline = true;
             this.descriptionTxtBox.Name = "descriptionTxtBox";
+            this.descriptionTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.descriptionTxtBox.Size = new System.Drawing.Size(294, 174);
             this.descriptionTxtBox.TabIndex = 50;
             // 

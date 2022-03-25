@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BookLibrary.Data.Models;
 
 namespace BookLibrary.Services
 {
     public interface IImageService
     {
-        int Create(string path);
+        Image Create(string path);
+        void Delete(int id);
     }
 }

@@ -80,7 +80,7 @@ namespace BookLibrary
 
         private void FavoritesBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Favorites(), sender);
+            OpenChildForm(new Favorites(user), sender);
         }
 
         private void LogOutBtn_Click(object sender, EventArgs e)

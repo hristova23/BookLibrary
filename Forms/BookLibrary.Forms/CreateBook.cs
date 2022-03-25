@@ -44,10 +44,10 @@ namespace BookLibrary.Forms
                 using var data = new BookLibraryDbContext();
 
                 var imageService = new ImageService(data);
-                int imageId = imageService.Create(imagePath);
+                var image = imageService.Create(imagePath);
 
                 var bookService = new BookService(data);
-                bookService.Create(title, description, pdfUrl, imageId, user.Id);
+                bookService.Create(title, description, pdfUrl, image.Id, user.Id);
 
                 foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
                 {

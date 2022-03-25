@@ -24,7 +24,7 @@ namespace BookLibrary.Forms
         {
             using var data = new BookLibraryDbContext();
             var bookService = new BookService(data);
-            var book = bookService.SearchByTitle(this.title);
+            var book = bookService.SearchByTitle(this.title).FirstOrDefault();
             OpenChildForm(new EditBook(book),sender);
         }
 
@@ -35,6 +35,7 @@ namespace BookLibrary.Forms
             var bookService = new BookService(data);
             int bookId = data.Books.Where(b => b.Title.ToLower() == this.title.ToLower()).FirstOrDefault().Id;
             bookService.Delete(bookId);
+            //reload page
         }
 
         public void OpenChildForm(Form childForm, object btnSender)

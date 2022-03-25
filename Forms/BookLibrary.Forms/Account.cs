@@ -20,11 +20,9 @@ namespace BookLibrary.Forms
 
         private void Account_Load(object sender, EventArgs e)
         {
-
             firstNameTxtBox.Text = user.FirstName;
             lastNameTxtBox.Text = user.LastName;
             emailNameTxtBox.Text = user.Email;
-
         }
     }
 }

@@ -56,11 +56,10 @@
             // 
             this.EmailTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.EmailTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmailTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmailTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EmailTxtBox.Location = new System.Drawing.Point(35, 113);
-            this.EmailTxtBox.Multiline = true;
             this.EmailTxtBox.Name = "EmailTxtBox";
-            this.EmailTxtBox.Size = new System.Drawing.Size(216, 28);
+            this.EmailTxtBox.Size = new System.Drawing.Size(216, 24);
             this.EmailTxtBox.TabIndex = 35;
             // 
             // label6
@@ -113,12 +112,11 @@
             // 
             this.PasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTxtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PasswordTxtBox.Location = new System.Drawing.Point(35, 178);
-            this.PasswordTxtBox.Multiline = true;
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.PasswordChar = '*';
-            this.PasswordTxtBox.Size = new System.Drawing.Size(216, 28);
+            this.PasswordTxtBox.Size = new System.Drawing.Size(216, 24);
             this.PasswordTxtBox.TabIndex = 30;
             // 
             // label3

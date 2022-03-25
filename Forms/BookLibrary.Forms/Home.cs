@@ -26,18 +26,10 @@ namespace BookLibrary.Forms
 
             foreach (var book in data.Books)
             {
-                var listItem = new BookListItem
-                {
-                    Title = book.Title,
-                    Author = $"{user.FirstName} {user.LastName}",
-                    ImagePath = data.Images.Where(i => i.Id == book.ImageId).FirstOrDefault().Path
-                };
+                var imagePath = data.Images.Where(i => i.Id == book.ImageId).FirstOrDefault();
+                var listItem = new BookListItem(user, book, imagePath.Path);
                 flowLayoutPanel.Controls.Add(listItem);
             }
-
-            //var imageService = new ImageService(data);
-            //int imageId = imageService.Create(imagePath);
-
         }
     }
 }

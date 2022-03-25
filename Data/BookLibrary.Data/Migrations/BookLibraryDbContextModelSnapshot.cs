@@ -68,7 +68,7 @@ namespace BookLibrary.Data.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("FavoriteBook");
+                    b.ToTable("FavoriteBooks");
                 });
 
             modelBuilder.Entity("BookLibrary.Data.Models.Image", b =>
