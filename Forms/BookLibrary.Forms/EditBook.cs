@@ -1,12 +1,11 @@
 ﻿using BookLibrary.Data;
+using BookLibrary.Data.Models;
+using BookLibrary.Services.Implementations;
 using BookLibrary.Services.Models.Book;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BookLibrary.Forms
@@ -37,18 +36,29 @@ namespace BookLibrary.Forms
             if (open.ShowDialog() == DialogResult.OK)
             {
                 //check id file is jpeg or png...
+                var imagePath = open.FileName;
                 coverPictureBox.Image = new Bitmap(open.FileName);
             }
         }
 
         private void SaveChangesBtn_Click(object sender, EventArgs e)
         {
+            var title = titleTxtBox.Text;
 
+            var data = new BookLibraryDbContext();
+            var bookService = new BookService(data);
+            Book currBook = data.Books.Where(b => b.Title == this.book.Title).FirstOrDefault();
+
+            currBook.Title = title;
+            currBook.PdfUrl = pdfUrlTxtBox.Text;
+            currBook.Description = descriptionTxtBox.Text;
+
+            data.SaveChanges();
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-
+            EditBook_Load(sender,e);
         }
     }
 }

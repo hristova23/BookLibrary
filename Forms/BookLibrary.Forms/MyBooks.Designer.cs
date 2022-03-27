@@ -37,16 +37,18 @@ namespace BookLibrary.Forms
             // 
             // CreateBookBtn
             // 
-            this.CreateBookBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CreateBookBtn.AutoSize = true;
+            this.CreateBookBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CreateBookBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
             this.CreateBookBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateBookBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CreateBookBtn.FlatAppearance.BorderSize = 0;
             this.CreateBookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateBookBtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CreateBookBtn.ForeColor = System.Drawing.Color.White;
-            this.CreateBookBtn.Location = new System.Drawing.Point(12, 362);
+            this.CreateBookBtn.Location = new System.Drawing.Point(0, 381);
             this.CreateBookBtn.Name = "CreateBookBtn";
-            this.CreateBookBtn.Size = new System.Drawing.Size(558, 37);
+            this.CreateBookBtn.Size = new System.Drawing.Size(582, 30);
             this.CreateBookBtn.TabIndex = 34;
             this.CreateBookBtn.Text = "Create Book";
             this.CreateBookBtn.UseVisualStyleBackColor = false;

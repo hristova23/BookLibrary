@@ -23,7 +23,7 @@ namespace BookLibrary.Forms
 
             foreach (var book in data.Books.Where(b=>b.UserId == user.Id))
             {
-                var listItem = new OwnedBookListItem
+                var listItem = new OwnedBookListItem(user)
                 {
                     Title = book.Title,
                     Author = $"{user.FirstName} {user.LastName}",

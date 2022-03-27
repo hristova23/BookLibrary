@@ -4,6 +4,7 @@ using System.Drawing;
 using BookLibrary.Data;
 using System.Linq;
 using BookLibrary.Services.Implementations;
+using BookLibrary.Services.Models.User;
 
 namespace BookLibrary.Forms
 {
@@ -12,11 +13,13 @@ namespace BookLibrary.Forms
         private string author;
         private string title;
         private string imagePath;
-        
+        private UserListingServiceModel user;
+
         private Form activeForm;
 
-        public OwnedBookListItem()
+        public OwnedBookListItem(UserListingServiceModel user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -35,7 +38,8 @@ namespace BookLibrary.Forms
             var bookService = new BookService(data);
             int bookId = data.Books.Where(b => b.Title.ToLower() == this.title.ToLower()).FirstOrDefault().Id;
             bookService.Delete(bookId);
-            //reload page
+
+            OpenChildForm(new MyBooks(user), sender);
         }
 
         public void OpenChildForm(Form childForm, object btnSender)

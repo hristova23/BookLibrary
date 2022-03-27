@@ -39,7 +39,7 @@ namespace BookLibrary.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.SaveChanges = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.changePassGroupBox = new System.Windows.Forms.GroupBox();
             this.confirmPassTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace BookLibrary.Forms
             this.UploadCoverBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.changePassGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,14 +161,15 @@ namespace BookLibrary.Forms
             this.label5.TabIndex = 36;
             this.label5.Text = "Account Information";
             // 
-            // pictureBox1
+            // coverPictureBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(352, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 204);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.coverPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coverPictureBox.Location = new System.Drawing.Point(352, 77);
+            this.coverPictureBox.Name = "coverPictureBox";
+            this.coverPictureBox.Size = new System.Drawing.Size(204, 204);
+            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coverPictureBox.TabIndex = 37;
+            this.coverPictureBox.TabStop = false;
             // 
             // changePassGroupBox
             // 
@@ -242,6 +243,7 @@ namespace BookLibrary.Forms
             this.UploadCoverBtn.TabIndex = 39;
             this.UploadCoverBtn.Text = "Upload Cover Photo";
             this.UploadCoverBtn.UseVisualStyleBackColor = false;
+            this.UploadCoverBtn.Click += new System.EventHandler(this.UploadCoverBtn_Click);
             // 
             // button1
             // 
@@ -256,6 +258,7 @@ namespace BookLibrary.Forms
             this.button1.TabIndex = 40;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -275,7 +278,7 @@ namespace BookLibrary.Forms
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UploadCoverBtn);
             this.Controls.Add(this.changePassGroupBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.coverPictureBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SaveChanges);
             this.Controls.Add(this.emailNameTxtBox);
@@ -288,7 +291,7 @@ namespace BookLibrary.Forms
             this.Name = "Account";
             this.Text = "Account";
             this.Load += new System.EventHandler(this.Account_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             this.changePassGroupBox.ResumeLayout(false);
             this.changePassGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -308,7 +311,7 @@ namespace BookLibrary.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SaveChanges;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox coverPictureBox;
         private System.Windows.Forms.GroupBox changePassGroupBox;
         private System.Windows.Forms.TextBox confirmPassTxtBox;
         private System.Windows.Forms.Label label7;
