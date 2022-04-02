@@ -33,6 +33,8 @@ namespace BookLibrary.Forms
         private void UploadCoverBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files (JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
+
             if (open.ShowDialog() == DialogResult.OK)
             {
                 //check id file is jpeg or png...

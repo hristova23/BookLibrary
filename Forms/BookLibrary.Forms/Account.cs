@@ -1,10 +1,6 @@
 ﻿using BookLibrary.Services.Models.User;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BookLibrary.Forms
@@ -35,15 +31,16 @@ namespace BookLibrary.Forms
         private void UploadCoverBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files (JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
+
             if (open.ShowDialog() == DialogResult.OK)
             {
-                //check id file is jpeg or png...
-               var imagePath = open.FileName;
+                var imagePath = open.FileName;
                 coverPictureBox.Image = new Bitmap(open.FileName);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CancelBtn_Click(object sender, EventArgs e)
         {
             Account_Load(sender,e);
         }

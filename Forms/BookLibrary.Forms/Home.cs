@@ -14,6 +14,7 @@ namespace BookLibrary.Forms
     public partial class Home : Form
     {
         private UserListingServiceModel user;
+
         public Home(UserListingServiceModel user)
         {
             InitializeComponent();

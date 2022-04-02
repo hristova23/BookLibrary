@@ -46,7 +46,7 @@ namespace BookLibrary.Forms
             this.newPassTxtBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.UploadCoverBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.changePassGroupBox.SuspendLayout();
@@ -245,20 +245,20 @@ namespace BookLibrary.Forms
             this.UploadCoverBtn.UseVisualStyleBackColor = false;
             this.UploadCoverBtn.Click += new System.EventHandler(this.UploadCoverBtn_Click);
             // 
-            // button1
+            // CancelBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(1)))), ((int)(((byte)(18)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(352, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 28);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(1)))), ((int)(((byte)(18)))));
+            this.CancelBtn.FlatAppearance.BorderSize = 0;
+            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CancelBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelBtn.Location = new System.Drawing.Point(352, 385);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(95, 28);
+            this.CancelBtn.TabIndex = 40;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // label8
             // 
@@ -275,7 +275,7 @@ namespace BookLibrary.Forms
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(582, 450);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.UploadCoverBtn);
             this.Controls.Add(this.changePassGroupBox);
             this.Controls.Add(this.coverPictureBox);
@@ -318,7 +318,7 @@ namespace BookLibrary.Forms
         private System.Windows.Forms.TextBox newPassTxtBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button UploadCoverBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Label label8;
     }
 }

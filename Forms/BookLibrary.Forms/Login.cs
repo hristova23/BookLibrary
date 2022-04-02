@@ -11,8 +11,6 @@ namespace BookLibrary.Forms
         public Login()
         {
             InitializeComponent();
-            EmailTxtBox.Text = "viki";
-            PasswordTxtBox.Text = "123123";
         }
 
         public void ClearForm(object sender, EventArgs e)

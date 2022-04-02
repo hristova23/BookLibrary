@@ -8,8 +8,8 @@ namespace BookLibrary.Forms
 {
     public partial class MyBooks : Form
     {
-        private Form activeForm;
         private UserListingServiceModel user;
+        private Form activeForm;
 
         public MyBooks(UserListingServiceModel user)
         {

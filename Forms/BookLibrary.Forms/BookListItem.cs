@@ -29,7 +29,7 @@ namespace BookLibrary.Forms
             var author = data.Users.Where(u=>u.Id == authorId).FirstOrDefault();
 
             titleLbl.Text = book.Title;
-            authorLbl.Text = $"{author.FirstName} {user.LastName}";
+            authorLbl.Text = $"{author.FirstName} {author.LastName}";
             coverPictureBox.Image = new Bitmap(imagePath);
         }
 

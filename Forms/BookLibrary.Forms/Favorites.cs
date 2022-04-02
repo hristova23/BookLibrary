@@ -16,10 +16,11 @@ namespace BookLibrary.Forms
     public partial class Favorites : Form
     {
         private UserListingServiceModel user;
+
         public Favorites(UserListingServiceModel user)
         {
-            this.user = user;
             InitializeComponent();
+            this.user = user;
             ShowFavoriteBooks();
         }
         public void ShowFavoriteBooks()
